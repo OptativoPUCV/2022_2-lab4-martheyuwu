@@ -2602,3 +2602,23 @@ hashmap.c:43:13: error: unused variable ‘map’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 a3299e6
+Fri 09 Sep 2022 12:46:27 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:44:18: error: request for member ‘capacity’ in something not a structure or union
+   44 |     long cap=hash->capacity;
+      |                  ^~
+hashmap.c:46:15: error: request for member ‘buckets’ in something not a structure or union
+   46 |     array=hash->buckets;
+      |               ^~
+hashmap.c:49:24: error: ‘capacity’ undeclared (first use in this function)
+   49 |       for (int pos;pos<capacity;pos++){
+      |                        ^~~~~~~~
+hashmap.c:49:24: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:54:9: error: request for member ‘capacity’ in something not a structure or union
+   54 |     hash->capacity++;
+      |         ^~
+Compilation failed
+224b0ed
