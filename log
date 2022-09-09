@@ -522,3 +522,13 @@ Fri 09 Sep 2022 03:11:21 AM UTC:
  tests:  0|6
 total_score: 0/70
 f424118
+Fri 09 Sep 2022 03:11:53 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘createMap’:
+hashmap.c:56:13: error: invalid type argument of ‘->’ (have ‘HashMap’ {aka ‘struct HashMap’})
+   56 |     (**hash)->buckets=NULL;
+      |             ^~
+Compilation failed
+3957898
