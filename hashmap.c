@@ -56,10 +56,11 @@ void insertMap(HashMap * map, char * key, void * value) {
         tam++;
       }
     }
-    else
+    else{
       array[pos]=newpair;
       map->current=pos;
       tam++;
+    }
 }
 
 void enlarge(HashMap * map) {
