@@ -438,3 +438,14 @@ hashmap.c:58:11: error: expected identifier before ‘->’ token
       |           ^~
 Compilation failed
 211b85b
+Fri 09 Sep 2022 03:00:40 AM UTC: 
+ hashmap.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘createMap’:
+hashmap.c:56:18: error: assignment to ‘long int’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   56 |     (*hash)->size=NULL;
+      |                  ^
+cc1: all warnings being treated as errors
+Compilation failed
+9d82e3c
