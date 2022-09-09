@@ -136,3 +136,14 @@ hashmap.c:56:10: error: ‘*hash’ is a pointer; did you mean to use ‘->’?
       |          ->
 Compilation failed
 bd63d8a
+Fri 09 Sep 2022 02:51:16 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘createMap’:
+hashmap.c:56:9: error: ‘*hash’ is a pointer; did you mean to use ‘->’?
+   56 |     hash->current=-1;
+      |         ^~
+      |         ->
+Compilation failed
+69fdc4c
