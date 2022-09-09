@@ -2734,3 +2734,15 @@ In file included from test.c:2:
       |              ^~~~~~
 Compilation failed
 e857dfd
+Fri 09 Sep 2022 12:59:12 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:44:33: error: ‘cap’ undeclared (first use in this function); did you mean ‘map’?
+   44 |     Pair **array=(Pair**)calloc(cap,sizeof(Pair*));
+      |                                 ^~~
+      |                                 map
+hashmap.c:44:33: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+e25273f
