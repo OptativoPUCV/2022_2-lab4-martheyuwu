@@ -2,3 +2,20 @@ Tue 06 Sep 2022 01:34:38 AM UTC:
  tests:  0|6
 total_score: 0/70
 5a539a6
+Fri 09 Sep 2022 02:21:17 AM UTC: 
+ hashmap.c | 7 +++++--
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘createMap’:
+hashmap.c:56:5: error: ‘buck’ undeclared (first use in this function)
+   56 |     buck=hash->buckets;
+      |     ^~~~
+hashmap.c:56:5: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:57:11: error: ‘buckets’ undeclared (first use in this function)
+   57 |     buck=(buckets*) calloc (1,sizeof(buckets));
+      |           ^~~~~~~
+hashmap.c:57:19: error: expected expression before ‘)’ token
+   57 |     buck=(buckets*) calloc (1,sizeof(buckets));
+      |                   ^
+Compilation failed
+3e544ae
