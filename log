@@ -543,3 +543,9 @@ hashmap.c:56:9: error: ‘*hash’ is a pointer; did you mean to use ‘->’?
       |         ->
 Compilation failed
 5b12262
+Fri 09 Sep 2022 03:12:08 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|6
+total_score: 0/70
+cb7096f
