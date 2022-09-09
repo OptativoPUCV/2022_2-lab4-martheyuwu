@@ -53,8 +53,8 @@ void insertMap(HashMap * map, char * key, void * value) {
             array[pos]=newpair;
             break;
         }
-      }
         tam++;
+      }
     }
     else
       array[pos]=newpair;

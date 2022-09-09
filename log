@@ -2790,3 +2790,17 @@ hashmap.c:61:7: note: ...this statement, but the latter is misleadingly indented
 cc1: all warnings being treated as errors
 Compilation failed
 1996445
+Fri 09 Sep 2022 01:13:46 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:59:5: error: this ‘else’ clause does not guard... [-Werror=misleading-indentation]
+   59 |     else
+      |     ^~~~
+hashmap.c:61:7: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘else’
+   61 |       map->current=pos;
+      |       ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+f28a946
