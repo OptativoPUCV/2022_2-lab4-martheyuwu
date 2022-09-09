@@ -147,3 +147,18 @@ hashmap.c:56:9: error: ‘*hash’ is a pointer; did you mean to use ‘->’?
       |         ->
 Compilation failed
 69fdc4c
+Fri 09 Sep 2022 02:51:59 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘createMap’:
+hashmap.c:55:20: error: initialization of ‘HashMap **’ {aka ‘struct HashMap **’} from incompatible pointer type ‘HashMap *’ {aka ‘struct HashMap *’} [-Werror=incompatible-pointer-types]
+   55 |     HashMap **hash=(HashMap*) calloc (1,sizeof(HashMap));
+      |                    ^
+hashmap.c:56:9: error: ‘*hash’ is a pointer; did you mean to use ‘->’?
+   56 |     hash->current=-1;
+      |         ^~
+      |         ->
+cc1: all warnings being treated as errors
+Compilation failed
+fb40692
