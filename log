@@ -1676,3 +1676,311 @@ test.c:100:6: error: ‘hash_test1’ defined but not used [-Werror=unused-funct
 cc1: all warnings being treated as errors
 Compilation failed
 146d4c6
+Fri 09 Sep 2022 12:42:53 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:45:17: error: initialization of ‘Pair *’ from incompatible pointer type ‘Pair **’ [-Werror=incompatible-pointer-types]
+   45 |     Pair *array=(Pair**)calloc(cap,sizeof(Pair*));
+      |                 ^
+hashmap.c:46:10: error: assignment to ‘Pair *’ from incompatible pointer type ‘Pair **’ [-Werror=incompatible-pointer-types]
+   46 |     array=hash->buckets;
+      |          ^
+hashmap.c:47:5: error: ‘pos’ undeclared (first use in this function); did you mean ‘pow’?
+   47 |     pos=hash(key,cap){
+      |     ^~~
+      |     pow
+hashmap.c:47:5: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:47:9: error: called object ‘hash’ is not a function or function pointer
+   47 |     pos=hash(key,cap){
+      |         ^~~~
+hashmap.c:43:14: note: declared here
+   43 |     HashMap *hash=(HashMap*)malloc(sizeof(HashMap));
+      |              ^~~~
+hashmap.c:47:22: error: expected ‘;’ before ‘{’ token
+   47 |     pos=hash(key,cap){
+      |                      ^
+      |                      ;
+test.c: In function ‘initializeMap’:
+test.c:51:17: error: ‘msg’ undeclared (first use in this function)
+   51 |         sprintf(msg, "value%d",i);
+      |                 ^~~
+test.c:53:20: error: implicit declaration of function ‘_strdup’; did you mean ‘strdup’? [-Werror=implicit-function-declaration]
+   53 |         createPair(_strdup(words[i]),_strdup(msg));
+      |                    ^~~~~~~
+      |                    strdup
+test.c:53:20: error: passing argument 1 of ‘createPair’ makes pointer from integer without a cast [-Werror=int-conversion]
+   53 |         createPair(_strdup(words[i]),_strdup(msg));
+      |                    ^~~~~~~~~~~~~~~~~
+      |                    |
+      |                    int
+In file included from test.c:4:
+hashmap.c:19:27: note: expected ‘char *’ but argument is of type ‘int’
+   19 | Pair * createPair( char * key,  void * value) {
+      |                    ~~~~~~~^~~
+test.c: In function ‘hash_test1’:
+test.c:101:14: error: called object ‘hash’ is not a function or function pointer
+  101 |     long pos=hash("computador",10);
+      |              ^~~~
+In file included from test.c:4:
+hashmap.c:43:14: note: declared here
+   43 |     HashMap *hash=(HashMap*)malloc(sizeof(HashMap));
+      |              ^~~~
+test.c:104:9: error: called object ‘hash’ is not a function or function pointer
+  104 |     pos=hash("silla",50);
+      |         ^~~~
+In file included from test.c:4:
+hashmap.c:43:14: note: declared here
+   43 |     HashMap *hash=(HashMap*)malloc(sizeof(HashMap));
+      |              ^~~~
+test.c:107:9: error: called object ‘hash’ is not a function or function pointer
+  107 |     pos=hash("mesa",5);
+      |         ^~~~
+In file included from test.c:4:
+hashmap.c:43:14: note: declared here
+   43 |     HashMap *hash=(HashMap*)malloc(sizeof(HashMap));
+      |              ^~~~
+test.c: In function ‘hash_test2’:
+test.c:118:17: error: called object ‘hash’ is not a function or function pointer
+  118 |         int p = hash(words[i],10);
+      |                 ^~~~
+In file included from test.c:4:
+hashmap.c:43:14: note: declared here
+   43 |     HashMap *hash=(HashMap*)malloc(sizeof(HashMap));
+      |              ^~~~
+test.c: In function ‘hash_test3’:
+test.c:126:8: error: called object ‘hash’ is not a function or function pointer
+  126 |     if(hash(_strdup("hola"),10)!=hash(_strdup("hola"),10)) printf("error: valor diferente para misma clave!\n");
+      |        ^~~~
+In file included from test.c:4:
+hashmap.c:43:14: note: declared here
+   43 |     HashMap *hash=(HashMap*)malloc(sizeof(HashMap));
+      |              ^~~~
+test.c:126:34: error: called object ‘hash’ is not a function or function pointer
+  126 |     if(hash(_strdup("hola"),10)!=hash(_strdup("hola"),10)) printf("error: valor diferente para misma clave!\n");
+      |                                  ^~~~
+In file included from test.c:4:
+hashmap.c:43:14: note: declared here
+   43 |     HashMap *hash=(HashMap*)malloc(sizeof(HashMap));
+      |              ^~~~
+test.c:127:8: error: called object ‘hash’ is not a function or function pointer
+  127 |     if(hash(_strdup("chao"),10)!=hash(_strdup("chao"),10)) printf("error: valor diferente para misma clave!\n");
+      |        ^~~~
+In file included from test.c:4:
+hashmap.c:43:14: note: declared here
+   43 |     HashMap *hash=(HashMap*)malloc(sizeof(HashMap));
+      |              ^~~~
+test.c:127:34: error: called object ‘hash’ is not a function or function pointer
+  127 |     if(hash(_strdup("chao"),10)!=hash(_strdup("chao"),10)) printf("error: valor diferente para misma clave!\n");
+      |                                  ^~~~
+In file included from test.c:4:
+hashmap.c:43:14: note: declared here
+   43 |     HashMap *hash=(HashMap*)malloc(sizeof(HashMap));
+      |              ^~~~
+test.c:128:8: error: called object ‘hash’ is not a function or function pointer
+  128 |     if(hash(_strdup("casa"),10)!=hash(_strdup("casa"),10)) printf("error: valor diferente para misma clave!\n");
+      |        ^~~~
+In file included from test.c:4:
+hashmap.c:43:14: note: declared here
+   43 |     HashMap *hash=(HashMap*)malloc(sizeof(HashMap));
+      |              ^~~~
+test.c:128:34: error: called object ‘hash’ is not a function or function pointer
+  128 |     if(hash(_strdup("casa"),10)!=hash(_strdup("casa"),10)) printf("error: valor diferente para misma clave!\n");
+      |                                  ^~~~
+In file included from test.c:4:
+hashmap.c:43:14: note: declared here
+   43 |     HashMap *hash=(HashMap*)malloc(sizeof(HashMap));
+      |              ^~~~
+test.c: In function ‘insert_test1’:
+test.c:141:20: error: passing argument 2 of ‘insertMap’ makes pointer from integer without a cast [-Werror=int-conversion]
+  141 |     insertMap(map, _strdup(":key"),_strdup("value"));
+      |                    ^~~~~~~~~~~~~~~
+      |                    |
+      |                    int
+In file included from test.c:4:
+hashmap.c:42:38: note: expected ‘char *’ but argument is of type ‘int’
+   42 | void insertMap(HashMap * map, char * key, void * value) {
+      |                               ~~~~~~~^~~
+test.c:141:36: error: passing argument 3 of ‘insertMap’ makes pointer from integer without a cast [-Werror=int-conversion]
+  141 |     insertMap(map, _strdup(":key"),_strdup("value"));
+      |                                    ^~~~~~~~~~~~~~~~
+      |                                    |
+      |                                    int
+In file included from test.c:4:
+hashmap.c:42:50: note: expected ‘void *’ but argument is of type ‘int’
+   42 | void insertMap(HashMap * map, char * key, void * value) {
+      |                                           ~~~~~~~^~~~~
+test.c: In function ‘insert_test2’:
+test.c:171:20: error: passing argument 2 of ‘insertMap’ makes pointer from integer without a cast [-Werror=int-conversion]
+  171 |     insertMap(map, _strdup("case"),_strdup("repetido"));
+      |                    ^~~~~~~~~~~~~~~
+      |                    |
+      |                    int
+In file included from test.c:4:
+hashmap.c:42:38: note: expected ‘char *’ but argument is of type ‘int’
+   42 | void insertMap(HashMap * map, char * key, void * value) {
+      |                               ~~~~~~~^~~
+test.c:171:36: error: passing argument 3 of ‘insertMap’ makes pointer from integer without a cast [-Werror=int-conversion]
+  171 |     insertMap(map, _strdup("case"),_strdup("repetido"));
+      |                                    ^~~~~~~~~~~~~~~~~~~
+      |                                    |
+      |                                    int
+In file included from test.c:4:
+hashmap.c:42:50: note: expected ‘void *’ but argument is of type ‘int’
+   42 | void insertMap(HashMap * map, char * key, void * value) {
+      |                                           ~~~~~~~^~~~~
+test.c: In function ‘insert_test3’:
+test.c:182:20: error: passing argument 2 of ‘insertMap’ makes pointer from integer without a cast [-Werror=int-conversion]
+  182 |     insertMap(map, _strdup("key"),_strdup("value"));
+      |                    ^~~~~~~~~~~~~~
+      |                    |
+      |                    int
+In file included from test.c:4:
+hashmap.c:42:38: note: expected ‘char *’ but argument is of type ‘int’
+   42 | void insertMap(HashMap * map, char * key, void * value) {
+      |                               ~~~~~~~^~~
+test.c:182:35: error: passing argument 3 of ‘insertMap’ makes pointer from integer without a cast [-Werror=int-conversion]
+  182 |     insertMap(map, _strdup("key"),_strdup("value"));
+      |                                   ^~~~~~~~~~~~~~~~
+      |                                   |
+      |                                   int
+In file included from test.c:4:
+hashmap.c:42:50: note: expected ‘void *’ but argument is of type ‘int’
+   42 | void insertMap(HashMap * map, char * key, void * value) {
+      |                                           ~~~~~~~^~~~~
+test.c: In function ‘insert_test4’:
+test.c:195:20: error: passing argument 2 of ‘insertMap’ makes pointer from integer without a cast [-Werror=int-conversion]
+  195 |     insertMap(map, _strdup("key"),_strdup("value"));
+      |                    ^~~~~~~~~~~~~~
+      |                    |
+      |                    int
+In file included from test.c:4:
+hashmap.c:42:38: note: expected ‘char *’ but argument is of type ‘int’
+   42 | void insertMap(HashMap * map, char * key, void * value) {
+      |                               ~~~~~~~^~~
+test.c:195:35: error: passing argument 3 of ‘insertMap’ makes pointer from integer without a cast [-Werror=int-conversion]
+  195 |     insertMap(map, _strdup("key"),_strdup("value"));
+      |                                   ^~~~~~~~~~~~~~~~
+      |                                   |
+      |                                   int
+In file included from test.c:4:
+hashmap.c:42:50: note: expected ‘void *’ but argument is of type ‘int’
+   42 | void insertMap(HashMap * map, char * key, void * value) {
+      |                                           ~~~~~~~^~~~~
+test.c:205:20: error: passing argument 2 of ‘insertMap’ makes pointer from integer without a cast [-Werror=int-conversion]
+  205 |     insertMap(map, _strdup("holi"),_strdup("value"));
+      |                    ^~~~~~~~~~~~~~~
+      |                    |
+      |                    int
+In file included from test.c:4:
+hashmap.c:42:38: note: expected ‘char *’ but argument is of type ‘int’
+   42 | void insertMap(HashMap * map, char * key, void * value) {
+      |                               ~~~~~~~^~~
+test.c:205:36: error: passing argument 3 of ‘insertMap’ makes pointer from integer without a cast [-Werror=int-conversion]
+  205 |     insertMap(map, _strdup("holi"),_strdup("value"));
+      |                                    ^~~~~~~~~~~~~~~~
+      |                                    |
+      |                                    int
+In file included from test.c:4:
+hashmap.c:42:50: note: expected ‘void *’ but argument is of type ‘int’
+   42 | void insertMap(HashMap * map, char * key, void * value) {
+      |                                           ~~~~~~~^~~~~
+test.c: In function ‘insert_test5’:
+test.c:222:20: error: passing argument 2 of ‘insertMap’ makes pointer from integer without a cast [-Werror=int-conversion]
+  222 |     insertMap(map, _strdup("key"),_strdup("value"));
+      |                    ^~~~~~~~~~~~~~
+      |                    |
+      |                    int
+In file included from test.c:4:
+hashmap.c:42:38: note: expected ‘char *’ but argument is of type ‘int’
+   42 | void insertMap(HashMap * map, char * key, void * value) {
+      |                               ~~~~~~~^~~
+test.c:222:35: error: passing argument 3 of ‘insertMap’ makes pointer from integer without a cast [-Werror=int-conversion]
+  222 |     insertMap(map, _strdup("key"),_strdup("value"));
+      |                                   ^~~~~~~~~~~~~~~~
+      |                                   |
+      |                                   int
+In file included from test.c:4:
+hashmap.c:42:50: note: expected ‘void *’ but argument is of type ‘int’
+   42 | void insertMap(HashMap * map, char * key, void * value) {
+      |                                           ~~~~~~~^~~~~
+test.c: In function ‘search_test2’:
+test.c:259:32: error: passing argument 1 of ‘createPair’ makes pointer from integer without a cast [-Werror=int-conversion]
+  259 |     map->buckets[9]=createPair(_strdup("key"),_strdup("value"));
+      |                                ^~~~~~~~~~~~~~
+      |                                |
+      |                                int
+In file included from test.c:4:
+hashmap.c:19:27: note: expected ‘char *’ but argument is of type ‘int’
+   19 | Pair * createPair( char * key,  void * value) {
+      |                    ~~~~~~~^~~
+test.c:259:47: error: passing argument 2 of ‘createPair’ makes pointer from integer without a cast [-Werror=int-conversion]
+  259 |     map->buckets[9]=createPair(_strdup("key"),_strdup("value"));
+      |                                               ^~~~~~~~~~~~~~~~
+      |                                               |
+      |                                               int
+In file included from test.c:4:
+hashmap.c:19:40: note: expected ‘void *’ but argument is of type ‘int’
+   19 | Pair * createPair( char * key,  void * value) {
+      |                                 ~~~~~~~^~~~~
+test.c: In function ‘search_test3’:
+test.c:280:17: error: ‘msg’ undeclared (first use in this function)
+  280 |         sprintf(msg,"searchMap retorna un elemento con clave %s", map->buckets[map->current]->key);
+      |                 ^~~
+test.c: In function ‘erase_test2’:
+test.c:317:32: error: passing argument 1 of ‘createPair’ makes pointer from integer without a cast [-Werror=int-conversion]
+  317 |     map->buckets[9]=createPair(_strdup("key"),_strdup("value"));
+      |                                ^~~~~~~~~~~~~~
+      |                                |
+      |                                int
+In file included from test.c:4:
+hashmap.c:19:27: note: expected ‘char *’ but argument is of type ‘int’
+   19 | Pair * createPair( char * key,  void * value) {
+      |                    ~~~~~~~^~~
+test.c:317:47: error: passing argument 2 of ‘createPair’ makes pointer from integer without a cast [-Werror=int-conversion]
+  317 |     map->buckets[9]=createPair(_strdup("key"),_strdup("value"));
+      |                                               ^~~~~~~~~~~~~~~~
+      |                                               |
+      |                                               int
+In file included from test.c:4:
+hashmap.c:19:40: note: expected ‘void *’ but argument is of type ‘int’
+   19 | Pair * createPair( char * key,  void * value) {
+      |                                 ~~~~~~~^~~~~
+test.c: In function ‘enlarge_test’:
+test.c:436:17: error: ‘msg’ undeclared (first use in this function)
+  436 |         sprintf(msg,"enlarged table is:\n");
+      |                 ^~~
+test.c: In function ‘insertMap’:
+test.c:453:5: error: ‘main’ is normally a non-static function [-Werror=main]
+  453 | int main( int argc, char *argv[] ) {
+      |     ^~~~
+test.c:511:1: error: expected declaration or statement at end of input
+  511 | }
+      | ^
+In file included from test.c:4:
+hashmap.c:45:11: error: variable ‘array’ set but not used [-Werror=unused-but-set-variable]
+   45 |     Pair *array=(Pair**)calloc(cap,sizeof(Pair*));
+      |           ^~~~~
+At top level:
+test.c:453:5: error: ‘main’ defined but not used [-Werror=unused-function]
+  453 | int main( int argc, char *argv[] ) {
+      |     ^~~~
+test.c:217:5: error: ‘insert_test5’ defined but not used [-Werror=unused-function]
+  217 | int insert_test5(){ //factor de carga>0.7, se llama a función enlarge
+      |     ^~~~~~~~~~~~
+test.c:131:6: error: ‘compare_test’ defined but not used [-Werror=unused-function]
+  131 | void compare_test(){
+      |      ^~~~~~~~~~~~
+test.c:125:6: error: ‘hash_test3’ defined but not used [-Werror=unused-function]
+  125 | void hash_test3(){ //no random
+      |      ^~~~~~~~~~
+test.c:111:6: error: ‘hash_test2’ defined but not used [-Werror=unused-function]
+  111 | void hash_test2(){ // colisiones
+      |      ^~~~~~~~~~
+test.c:100:6: error: ‘hash_test1’ defined but not used [-Werror=unused-function]
+  100 | void hash_test1(){ // posición válida
+      |      ^~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+1aceced
