@@ -482,3 +482,14 @@ Fri 09 Sep 2022 03:07:35 AM UTC:
  tests:  0|6
 total_score: 0/70
 e2f9590
+Fri 09 Sep 2022 03:07:46 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘createMap’:
+hashmap.c:60:12: error: returning ‘HashMap **’ {aka ‘struct HashMap **’} from a function with incompatible return type ‘HashMap *’ {aka ‘struct HashMap *’} [-Werror=incompatible-pointer-types]
+   60 |     return hash;
+      |            ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+edf12a4
