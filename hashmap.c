@@ -46,7 +46,7 @@ void insertMap(HashMap * map, char * key, void * value) {
     array=map->buckets;
     long pos=hash(key,cap);
     if (array[pos]!=NULL){
-      for (int pos;pos<capacity;pos++){
+      for (int pos;pos<cap;pos++){
         if (array[pos]==NULL)
           array[pos]=value;
       }
