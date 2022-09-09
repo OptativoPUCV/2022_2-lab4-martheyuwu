@@ -2894,3 +2894,14 @@ Fri 09 Sep 2022 01:34:30 PM UTC:
  tests:  4|5
 total_score: 20/70
 2c8daaf
+Fri 09 Sep 2022 01:35:51 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:46:7: error: statement with no effect [-Werror=unused-value]
+   46 |       for (pos;pos<=map->capacity;pos++){
+      |       ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+0567894
