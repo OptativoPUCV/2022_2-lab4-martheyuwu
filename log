@@ -688,3 +688,9 @@ hashmap.c:55:20: error: initialization of ‘HashMap **’ {aka ‘struct HashMa
 cc1: all warnings being treated as errors
 Compilation failed
 9424d07
+Fri 09 Sep 2022 03:19:57 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|6
+total_score: 0/70
+01ad75a
