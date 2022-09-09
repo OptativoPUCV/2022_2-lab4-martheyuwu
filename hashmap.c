@@ -51,6 +51,7 @@ void insertMap(HashMap * map, char * key, void * value) {
       for (;pos<cap;pos++){
         if (array[pos]==NULL){
             array[pos]=newpair;
+            map->current=pos;
             break;
         }
         tam++;
