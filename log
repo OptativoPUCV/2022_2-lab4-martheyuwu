@@ -2691,3 +2691,17 @@ hashmap.c:45:10: error: unused variable ‘tam’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 ac1d561
+Fri 09 Sep 2022 12:53:22 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:46:5: error: expected ‘,’ or ‘;’ before ‘Pair’
+   46 |     Pair **array=(Pair**)calloc(cap,sizeof(Pair*));
+      |     ^~~~
+hashmap.c:47:5: error: ‘array’ undeclared (first use in this function)
+   47 |     array=map->buckets;
+      |     ^~~~~
+hashmap.c:47:5: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+893d776

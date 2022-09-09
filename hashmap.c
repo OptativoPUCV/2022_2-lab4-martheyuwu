@@ -52,7 +52,7 @@ void insertMap(HashMap * map, char * key, void * value) {
           array[pos]=value;
       }
     }
-    cap++;
+    tam++;
 }
 
 void enlarge(HashMap * map) {
