@@ -244,3 +244,20 @@ hashmap.c:59:12: error: returning ‘HashMap **’ {aka ‘struct HashMap **’}
 cc1: all warnings being treated as errors
 Compilation failed
 2dcf34a
+Fri 09 Sep 2022 02:54:54 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘createMap’:
+hashmap.c:55:19: error: initialization of ‘HashMap *’ {aka ‘struct HashMap *’} from incompatible pointer type ‘HashMap **’ {aka ‘struct HashMap **’} [-Werror=incompatible-pointer-types]
+   55 |     HashMap *hash=(HashMap**) calloc (1,sizeof(HashMap));
+      |                   ^
+hashmap.c:56:15: error: assignment to ‘long int’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   56 |     hash->size=NULL;
+      |               ^
+hashmap.c:57:19: error: assignment to ‘long int’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   57 |     hash->capacity=NULL;
+      |                   ^
+cc1: all warnings being treated as errors
+Compilation failed
+245c8c7
