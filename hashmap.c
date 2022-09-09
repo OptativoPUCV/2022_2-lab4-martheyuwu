@@ -43,17 +43,22 @@ void insertMap(HashMap * map, char * key, void * value) {
     map=(HashMap*)malloc(sizeof(HashMap));
     Pair *newpair=createPair(key,value);
     long cap=map->capacity;
+    long tam=map->size;
     long pos=hash(key,cap);
     Pair **array=(Pair**)calloc(cap,sizeof(Pair*));
-    long tam=map->size;
     array=map->buckets;
     if (array[pos]!=NULL){
       for (;pos<cap;pos++){
         if (array[pos]==NULL)
             array[pos]=newpair;
+            break;
       }
       tam++;
     }
+    else
+      array[pos]=newpair;
+      map->current=pos;
+      tam++;
 }
 
 void enlarge(HashMap * map) {

@@ -2756,3 +2756,23 @@ Fri 09 Sep 2022 01:08:52 PM UTC:
  1 file changed, 3 insertions(+), 2 deletions(-)
  tests:  0|0
 730fbf8
+Fri 09 Sep 2022 01:13:03 PM UTC: 
+ hashmap.c | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:52:9: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+   52 |         if (array[pos]==NULL)
+      |         ^~
+hashmap.c:54:13: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   54 |             break;
+      |             ^~~~~
+hashmap.c:58:5: error: this ‘else’ clause does not guard... [-Werror=misleading-indentation]
+   58 |     else
+      |     ^~~~
+hashmap.c:60:7: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘else’
+   60 |       map->current=pos;
+      |       ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+1408af4
