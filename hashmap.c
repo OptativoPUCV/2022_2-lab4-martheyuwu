@@ -49,10 +49,10 @@ void insertMap(HashMap * map, char * key, void * value) {
     if (array[pos]!=NULL){
       for (;pos<cap;pos++){
         if (array[pos]==NULL)
-          array[pos]=value;
+            array[pos]=value;
       }
+      tam++;
     }
-    tam++;
 }
 
 void enlarge(HashMap * map) {
