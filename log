@@ -663,3 +663,17 @@ hashmap.c:60:12: error: returning ‘HashMap **’ {aka ‘struct HashMap **’}
 cc1: all warnings being treated as errors
 Compilation failed
 2fa348c
+Fri 09 Sep 2022 03:19:31 AM UTC: 
+ hashmap.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘createMap’:
+hashmap.c:55:20: error: initialization of ‘HashMap **’ {aka ‘struct HashMap **’} from incompatible pointer type ‘HashMap *’ {aka ‘struct HashMap *’} [-Werror=incompatible-pointer-types]
+   55 |     HashMap **hash=(HashMap*)malloc(sizeof(HashMap));
+      |                    ^
+hashmap.c:60:12: error: returning ‘HashMap **’ {aka ‘struct HashMap **’} from a function with incompatible return type ‘HashMap *’ {aka ‘struct HashMap *’} [-Werror=incompatible-pointer-types]
+   60 |     return hash;
+      |            ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+9bde4d9
