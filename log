@@ -421,3 +421,20 @@ hashmap.c:58:9: error: ‘*hash’ is a pointer; did you mean to use ‘->’?
       |         ->
 Compilation failed
 4d9bf4c
+Fri 09 Sep 2022 02:58:34 AM UTC: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘createMap’:
+hashmap.c:56:9: error: ‘*hash’ is a pointer; did you mean to use ‘->’?
+   56 |     hash->size=NULL;
+      |         ^~
+      |         ->
+hashmap.c:57:11: error: expected identifier before ‘->’ token
+   57 |     hash->->capacity=capacity;
+      |           ^~
+hashmap.c:58:11: error: expected identifier before ‘->’ token
+   58 |     hash->->current=-1;
+      |           ^~
+Compilation failed
+211b85b
