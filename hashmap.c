@@ -43,14 +43,15 @@ void insertMap(HashMap * map, char * key, void * value) {
     Pair *newpair=createPair(key,value);
     long pos=hash(key,map->capacity);
     if (map->buckets[pos]!=NULL){
-      if (pos==map->capacity)
-        pos=0;
       for (;pos<map->capacity;pos++){
+        if (pos==map->capacity)
+          pos=0;
         if (map->buckets[pos]==NULL){
             map->buckets[pos]=newpair;
             map->current=pos;
             break;
         }
+        pos++;
         map->size++;
       }
     }
