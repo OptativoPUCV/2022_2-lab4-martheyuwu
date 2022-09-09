@@ -42,7 +42,7 @@ int is_equal(void* key1, void* key2){
 void insertMap(HashMap * map, char * key, void * value) {
     HashMap *hash=(HashMap*)malloc(sizeof(HashMap));
     long cap=hash->capacity;
-    Pair *array=(Pair**)calloc(cap,sizeof(Pair*));
+    Pair **array=(Pair**)calloc(cap,sizeof(Pair*));
     array=hash->buckets;
     pos=hash(key,cap){
     if (array[pos]!=NULL){
