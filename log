@@ -2622,3 +2622,17 @@ hashmap.c:54:9: error: request for member ‘capacity’ in something not a stru
       |         ^~
 Compilation failed
 224b0ed
+Fri 09 Sep 2022 12:46:46 PM UTC: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:49:24: error: ‘capacity’ undeclared (first use in this function)
+   49 |       for (int pos;pos<capacity;pos++){
+      |                        ^~~~~~~~
+hashmap.c:49:24: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:54:9: error: request for member ‘capacity’ in something not a structure or union
+   54 |     hash->capacity++;
+      |         ^~
+Compilation failed
+5c3d34c
