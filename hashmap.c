@@ -49,11 +49,12 @@ void insertMap(HashMap * map, char * key, void * value) {
     array=map->buckets;
     if (array[pos]!=NULL){
       for (;pos<cap;pos++){
-        if (array[pos]==NULL)
+        if (array[pos]==NULL){
             array[pos]=newpair;
             break;
+        }
       }
-      tam++;
+        tam++;
     }
     else
       array[pos]=newpair;
