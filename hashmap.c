@@ -43,7 +43,7 @@ void insertMap(HashMap * map, char * key, void * value) {
     HashMap *hash=(HashMap*)malloc(sizeof(HashMap));
     long cap=hash->capacity;
     Pair **array=(Pair**)calloc(cap,sizeof(Pair*));
-    array=hash->buckets;
+    long array=hash->buckets;
     long pos=hash(key,cap);
     if (array[pos]!=NULL){
       for (int pos;pos<capacity;pos++){

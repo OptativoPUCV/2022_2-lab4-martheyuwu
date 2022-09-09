@@ -2476,3 +2476,45 @@ hashmap.c:51:21: error: assignment to ‘Pair *’ from incompatible pointer typ
 cc1: all warnings being treated as errors
 Compilation failed
 d296ba1
+Fri 09 Sep 2022 12:44:46 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:46:10: error: conflicting types for ‘array’
+   46 |     long array=hash->buckets;
+      |          ^~~~~
+hashmap.c:45:12: note: previous definition of ‘array’ was here
+   45 |     Pair **array=(Pair**)calloc(cap,sizeof(Pair*));
+      |            ^~~~~
+hashmap.c:46:16: error: initialization of ‘long int’ from ‘Pair **’ makes integer from pointer without a cast [-Werror=int-conversion]
+   46 |     long array=hash->buckets;
+      |                ^~~~
+hashmap.c:47:14: error: called object ‘hash’ is not a function or function pointer
+   47 |     long pos=hash(key,cap);
+      |              ^~~~
+hashmap.c:43:14: note: declared here
+   43 |     HashMap *hash=(HashMap*)malloc(sizeof(HashMap));
+      |              ^~~~
+hashmap.c:48:14: error: subscripted value is neither array nor pointer nor vector
+   48 |     if (array[pos]!=NULL){
+      |              ^
+hashmap.c:49:24: error: ‘capacity’ undeclared (first use in this function)
+   49 |       for (int pos;pos<capacity;pos++){
+      |                        ^~~~~~~~
+hashmap.c:49:24: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:50:18: error: subscripted value is neither array nor pointer nor vector
+   50 |         if (array[pos]==NULL)
+      |                  ^
+hashmap.c:51:16: error: subscripted value is neither array nor pointer nor vector
+   51 |           array[pos]=map;
+      |                ^
+hashmap.c:47:10: error: variable ‘pos’ set but not used [-Werror=unused-but-set-variable]
+   47 |     long pos=hash(key,cap);
+      |          ^~~
+hashmap.c:46:10: error: variable ‘array’ set but not used [-Werror=unused-but-set-variable]
+   46 |     long array=hash->buckets;
+      |          ^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+365a850
