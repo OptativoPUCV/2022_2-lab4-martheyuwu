@@ -2455,3 +2455,24 @@ hashmap.c:45:12: error: variable ‘array’ set but not used [-Werror=unused-bu
 cc1: all warnings being treated as errors
 Compilation failed
 35785d5
+Fri 09 Sep 2022 12:44:22 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:47:14: error: called object ‘hash’ is not a function or function pointer
+   47 |     long pos=hash(key,cap);
+      |              ^~~~
+hashmap.c:43:14: note: declared here
+   43 |     HashMap *hash=(HashMap*)malloc(sizeof(HashMap));
+      |              ^~~~
+hashmap.c:49:24: error: ‘capacity’ undeclared (first use in this function)
+   49 |       for (int pos;pos<capacity;pos++){
+      |                        ^~~~~~~~
+hashmap.c:49:24: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:51:21: error: assignment to ‘Pair *’ from incompatible pointer type ‘HashMap *’ {aka ‘struct HashMap *’} [-Werror=incompatible-pointer-types]
+   51 |           array[pos]=map;
+      |                     ^
+cc1: all warnings being treated as errors
+Compilation failed
+d296ba1
