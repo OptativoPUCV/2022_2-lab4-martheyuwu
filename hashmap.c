@@ -51,7 +51,7 @@ void insertMap(HashMap * map, char * key, void * value) {
           array[pos]=value;
       }
     }
-    hash->capacity++;
+    cap++;
 }
 
 void enlarge(HashMap * map) {

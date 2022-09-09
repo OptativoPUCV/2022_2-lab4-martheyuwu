@@ -2646,3 +2646,14 @@ hashmap.c:54:9: error: request for member ‘capacity’ in something not a stru
       |         ^~
 Compilation failed
 efef7d1
+Fri 09 Sep 2022 12:47:31 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:49:23: error: ‘pos’ may be used uninitialized in this function [-Werror=maybe-uninitialized]
+   49 |       for (int pos;pos<cap;pos++){
+      |                    ~~~^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+9848595
