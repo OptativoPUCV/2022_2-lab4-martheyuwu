@@ -606,3 +606,14 @@ hashmap.c:61:1: error: control reaches end of non-void function [-Werror=return-
 cc1: all warnings being treated as errors
 Compilation failed
 b629a59
+Fri 09 Sep 2022 03:17:25 AM UTC: 
+ hashmap.c | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘createMap’:
+hashmap.c:55:19: error: initialization of ‘HashMap *’ {aka ‘struct HashMap *’} from incompatible pointer type ‘HashMap **’ {aka ‘struct HashMap **’} [-Werror=incompatible-pointer-types]
+   55 |     HashMap *hash=(HashMap**)malloc(sizeof(HashMap));
+      |                   ^
+cc1: all warnings being treated as errors
+Compilation failed
+5248cbf
