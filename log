@@ -2286,3 +2286,126 @@ test.c:100:6: error: ‘hash_test1’ defined but not used [-Werror=unused-funct
 cc1: all warnings being treated as errors
 Compilation failed
 4a10f27
+Fri 09 Sep 2022 12:43:26 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:47:14: error: called object ‘hash’ is not a function or function pointer
+   47 |     long pos=hash(key,cap){
+      |              ^~~~
+hashmap.c:43:14: note: declared here
+   43 |     HashMap *hash=(HashMap*)malloc(sizeof(HashMap));
+      |              ^~~~
+hashmap.c:47:27: error: expected ‘,’ or ‘;’ before ‘{’ token
+   47 |     long pos=hash(key,cap){
+      |                           ^
+test.c: In function ‘hash_test1’:
+test.c:101:14: error: called object ‘hash’ is not a function or function pointer
+  101 |     long pos=hash("computador",10);
+      |              ^~~~
+In file included from test.c:4:
+hashmap.c:43:14: note: declared here
+   43 |     HashMap *hash=(HashMap*)malloc(sizeof(HashMap));
+      |              ^~~~
+test.c:104:9: error: called object ‘hash’ is not a function or function pointer
+  104 |     pos=hash("silla",50);
+      |         ^~~~
+In file included from test.c:4:
+hashmap.c:43:14: note: declared here
+   43 |     HashMap *hash=(HashMap*)malloc(sizeof(HashMap));
+      |              ^~~~
+test.c:107:9: error: called object ‘hash’ is not a function or function pointer
+  107 |     pos=hash("mesa",5);
+      |         ^~~~
+In file included from test.c:4:
+hashmap.c:43:14: note: declared here
+   43 |     HashMap *hash=(HashMap*)malloc(sizeof(HashMap));
+      |              ^~~~
+test.c: In function ‘hash_test2’:
+test.c:118:17: error: called object ‘hash’ is not a function or function pointer
+  118 |         int p = hash(words[i],10);
+      |                 ^~~~
+In file included from test.c:4:
+hashmap.c:43:14: note: declared here
+   43 |     HashMap *hash=(HashMap*)malloc(sizeof(HashMap));
+      |              ^~~~
+test.c: In function ‘hash_test3’:
+test.c:126:8: error: called object ‘hash’ is not a function or function pointer
+  126 |     if(hash(_strdup("hola"),10)!=hash(_strdup("hola"),10)) printf("error: valor diferente para misma clave!\n");
+      |        ^~~~
+In file included from test.c:4:
+hashmap.c:43:14: note: declared here
+   43 |     HashMap *hash=(HashMap*)malloc(sizeof(HashMap));
+      |              ^~~~
+test.c:126:34: error: called object ‘hash’ is not a function or function pointer
+  126 |     if(hash(_strdup("hola"),10)!=hash(_strdup("hola"),10)) printf("error: valor diferente para misma clave!\n");
+      |                                  ^~~~
+In file included from test.c:4:
+hashmap.c:43:14: note: declared here
+   43 |     HashMap *hash=(HashMap*)malloc(sizeof(HashMap));
+      |              ^~~~
+test.c:127:8: error: called object ‘hash’ is not a function or function pointer
+  127 |     if(hash(_strdup("chao"),10)!=hash(_strdup("chao"),10)) printf("error: valor diferente para misma clave!\n");
+      |        ^~~~
+In file included from test.c:4:
+hashmap.c:43:14: note: declared here
+   43 |     HashMap *hash=(HashMap*)malloc(sizeof(HashMap));
+      |              ^~~~
+test.c:127:34: error: called object ‘hash’ is not a function or function pointer
+  127 |     if(hash(_strdup("chao"),10)!=hash(_strdup("chao"),10)) printf("error: valor diferente para misma clave!\n");
+      |                                  ^~~~
+In file included from test.c:4:
+hashmap.c:43:14: note: declared here
+   43 |     HashMap *hash=(HashMap*)malloc(sizeof(HashMap));
+      |              ^~~~
+test.c:128:8: error: called object ‘hash’ is not a function or function pointer
+  128 |     if(hash(_strdup("casa"),10)!=hash(_strdup("casa"),10)) printf("error: valor diferente para misma clave!\n");
+      |        ^~~~
+In file included from test.c:4:
+hashmap.c:43:14: note: declared here
+   43 |     HashMap *hash=(HashMap*)malloc(sizeof(HashMap));
+      |              ^~~~
+test.c:128:34: error: called object ‘hash’ is not a function or function pointer
+  128 |     if(hash(_strdup("casa"),10)!=hash(_strdup("casa"),10)) printf("error: valor diferente para misma clave!\n");
+      |                                  ^~~~
+In file included from test.c:4:
+hashmap.c:43:14: note: declared here
+   43 |     HashMap *hash=(HashMap*)malloc(sizeof(HashMap));
+      |              ^~~~
+test.c: In function ‘insertMap’:
+test.c:453:5: error: ‘main’ is normally a non-static function [-Werror=main]
+  453 | int main( int argc, char *argv[] ) {
+      |     ^~~~
+test.c:511:1: error: expected declaration or statement at end of input
+  511 | }
+      | ^
+In file included from test.c:4:
+hashmap.c:47:10: error: unused variable ‘pos’ [-Werror=unused-variable]
+   47 |     long pos=hash(key,cap){
+      |          ^~~
+hashmap.c:45:12: error: variable ‘array’ set but not used [-Werror=unused-but-set-variable]
+   45 |     Pair **array=(Pair**)calloc(cap,sizeof(Pair*));
+      |            ^~~~~
+At top level:
+test.c:453:5: error: ‘main’ defined but not used [-Werror=unused-function]
+  453 | int main( int argc, char *argv[] ) {
+      |     ^~~~
+test.c:217:5: error: ‘insert_test5’ defined but not used [-Werror=unused-function]
+  217 | int insert_test5(){ //factor de carga>0.7, se llama a función enlarge
+      |     ^~~~~~~~~~~~
+test.c:131:6: error: ‘compare_test’ defined but not used [-Werror=unused-function]
+  131 | void compare_test(){
+      |      ^~~~~~~~~~~~
+test.c:125:6: error: ‘hash_test3’ defined but not used [-Werror=unused-function]
+  125 | void hash_test3(){ //no random
+      |      ^~~~~~~~~~
+test.c:111:6: error: ‘hash_test2’ defined but not used [-Werror=unused-function]
+  111 | void hash_test2(){ // colisiones
+      |      ^~~~~~~~~~
+test.c:100:6: error: ‘hash_test1’ defined but not used [-Werror=unused-function]
+  100 | void hash_test1(){ // posición válida
+      |      ^~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+8ff31ee
