@@ -532,3 +532,14 @@ hashmap.c:56:13: error: invalid type argument of ‘->’ (have ‘HashMap’ {a
       |             ^~
 Compilation failed
 3957898
+Fri 09 Sep 2022 03:12:02 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘createMap’:
+hashmap.c:56:9: error: ‘*hash’ is a pointer; did you mean to use ‘->’?
+   56 |     hash->buckets=NULL;
+      |         ^~
+      |         ->
+Compilation failed
+5b12262
