@@ -2432,3 +2432,26 @@ hashmap.c:45:12: error: variable ‘array’ set but not used [-Werror=unused-bu
 cc1: all warnings being treated as errors
 Compilation failed
 86b6a48
+Fri 09 Sep 2022 12:44:13 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:47:15: error: called object ‘hash’ is not a function or function pointer
+   47 |     long *pos=hash(key,cap)
+      |               ^~~~
+hashmap.c:43:14: note: declared here
+   43 |     HashMap *hash=(HashMap*)malloc(sizeof(HashMap));
+      |              ^~~~
+hashmap.c:48:5: error: expected ‘,’ or ‘;’ before ‘if’
+   48 |     if (array[pos]!=NULL){
+      |     ^~
+hashmap.c:47:11: error: unused variable ‘pos’ [-Werror=unused-variable]
+   47 |     long *pos=hash(key,cap)
+      |           ^~~
+hashmap.c:45:12: error: variable ‘array’ set but not used [-Werror=unused-but-set-variable]
+   45 |     Pair **array=(Pair**)calloc(cap,sizeof(Pair*));
+      |            ^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+35785d5
