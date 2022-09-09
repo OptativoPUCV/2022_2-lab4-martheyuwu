@@ -633,3 +633,33 @@ hashmap.c:55:19: error: initialization of ‘HashMap *’ {aka ‘struct HashMap
 cc1: all warnings being treated as errors
 Compilation failed
 635a734
+Fri 09 Sep 2022 03:18:59 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘createMap’:
+hashmap.c:55:20: error: initialization of ‘HashMap **’ {aka ‘struct HashMap **’} from incompatible pointer type ‘HashMap *’ {aka ‘struct HashMap *’} [-Werror=incompatible-pointer-types]
+   55 |     HashMap **hash=(HashMap*)malloc(sizeof(HashMap));
+      |                    ^
+hashmap.c:56:9: error: ‘*hash’ is a pointer; did you mean to use ‘->’?
+   56 |     hash->buckets=NULL;
+      |         ^~
+      |         ->
+hashmap.c:57:9: error: ‘*hash’ is a pointer; did you mean to use ‘->’?
+   57 |     hash->size=0;
+      |         ^~
+      |         ->
+hashmap.c:58:9: error: ‘*hash’ is a pointer; did you mean to use ‘->’?
+   58 |     hash->capacity=capacity;
+      |         ^~
+      |         ->
+hashmap.c:59:9: error: ‘*hash’ is a pointer; did you mean to use ‘->’?
+   59 |     hash->current=-1;
+      |         ^~
+      |         ->
+hashmap.c:60:12: error: returning ‘HashMap **’ {aka ‘struct HashMap **’} from a function with incompatible return type ‘HashMap *’ {aka ‘struct HashMap *’} [-Werror=incompatible-pointer-types]
+   60 |     return hash;
+      |            ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+2fa348c
