@@ -2835,3 +2835,14 @@ hashmap.c:45:14: error: ‘HashMap’ {aka ‘struct HashMap’} has no member n
       |              buckets
 Compilation failed
 904ab06
+Fri 09 Sep 2022 01:20:06 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:45:14: error: ‘HashMap’ {aka ‘struct HashMap’} has no member named ‘bcukets’; did you mean ‘buckets’?
+   45 |     if (map->bcukets[pos]!=NULL){
+      |              ^~~~~~~
+      |              buckets
+Compilation failed
+0f60f02
