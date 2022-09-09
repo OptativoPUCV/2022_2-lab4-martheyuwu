@@ -2819,3 +2819,19 @@ Fri 09 Sep 2022 01:16:50 PM UTC:
  1 file changed, 2 insertions(+)
  tests:  0|0
 04105e5
+Fri 09 Sep 2022 01:19:56 PM UTC: 
+ hashmap.c | 21 ++++++++-------------
+ 1 file changed, 8 insertions(+), 13 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:44:23: error: ‘cap’ undeclared (first use in this function); did you mean ‘map’?
+   44 |     long pos=hash(key,cap);
+      |                       ^~~
+      |                       map
+hashmap.c:44:23: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:45:14: error: ‘HashMap’ {aka ‘struct HashMap’} has no member named ‘bcukets’; did you mean ‘buckets’?
+   45 |     if (map->bcukets[pos]!=NULL){
+      |              ^~~~~~~
+      |              buckets
+Compilation failed
+904ab06
