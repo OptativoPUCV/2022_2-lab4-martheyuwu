@@ -221,3 +221,26 @@ hashmap.c:58:9: error: ‘*hash’ is a pointer; did you mean to use ‘->’?
       |         ->
 Compilation failed
 8a39c2d
+Fri 09 Sep 2022 02:54:44 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘createMap’:
+hashmap.c:56:9: error: ‘*hash’ is a pointer; did you mean to use ‘->’?
+   56 |     hash->size=NULL;
+      |         ^~
+      |         ->
+hashmap.c:57:9: error: ‘*hash’ is a pointer; did you mean to use ‘->’?
+   57 |     hash->capacity=NULL;
+      |         ^~
+      |         ->
+hashmap.c:58:9: error: ‘*hash’ is a pointer; did you mean to use ‘->’?
+   58 |     hash->current=-1;
+      |         ^~
+      |         ->
+hashmap.c:59:12: error: returning ‘HashMap **’ {aka ‘struct HashMap **’} from a function with incompatible return type ‘HashMap *’ {aka ‘struct HashMap *’} [-Werror=incompatible-pointer-types]
+   59 |     return hash;
+      |            ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+2dcf34a
