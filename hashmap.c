@@ -55,6 +55,8 @@ void insertMap(HashMap * map, char * key, void * value) {
       }
     }
     else{
+      if (pos==map->capacity)
+        pos=0;
       map->buckets[pos]=newpair;
       map->current=pos;
       map->size++;
