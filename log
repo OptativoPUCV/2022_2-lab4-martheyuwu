@@ -2539,3 +2539,33 @@ hashmap.c:51:21: error: assignment to ‘Pair *’ from incompatible pointer typ
 cc1: all warnings being treated as errors
 Compilation failed
 7b5cccf
+Fri 09 Sep 2022 12:46:05 PM UTC: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:43:14: error: ‘map’ redeclared as different kind of symbol
+   43 |     HashMap *map=(HashMap*)malloc(sizeof(HashMap));
+      |              ^~~
+hashmap.c:42:26: note: previous definition of ‘map’ was here
+   42 | void insertMap(HashMap * map, char * key, void * value) {
+      |                ~~~~~~~~~~^~~
+hashmap.c:44:18: error: request for member ‘capacity’ in something not a structure or union
+   44 |     long cap=hash->capacity;
+      |                  ^~
+hashmap.c:46:15: error: request for member ‘buckets’ in something not a structure or union
+   46 |     array=hash->buckets;
+      |               ^~
+hashmap.c:49:24: error: ‘capacity’ undeclared (first use in this function)
+   49 |       for (int pos;pos<capacity;pos++){
+      |                        ^~~~~~~~
+hashmap.c:49:24: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:54:9: error: request for member ‘capacity’ in something not a structure or union
+   54 |     hash->capacity++;
+      |         ^~
+hashmap.c:43:14: error: unused variable ‘map’ [-Werror=unused-variable]
+   43 |     HashMap *map=(HashMap*)malloc(sizeof(HashMap));
+      |              ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+79a59dd
