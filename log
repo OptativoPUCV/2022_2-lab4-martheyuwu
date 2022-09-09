@@ -48,3 +48,17 @@ hashmap.c:56:28: error: expected expression before ‘)’ token
       |                            ^
 Compilation failed
 0603998
+Fri 09 Sep 2022 02:24:50 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘createMap’:
+hashmap.c:56:18: error: assignment to ‘Pair **’ from incompatible pointer type ‘HashMap *’ {aka ‘struct HashMap *’} [-Werror=incompatible-pointer-types]
+   56 |     hash->buckets=(HashMap*) calloc (1,sizeof(HashMap));
+      |                  ^
+hashmap.c:56:18: error: ‘hash’ is used uninitialized in this function [-Werror=uninitialized]
+   56 |     hash->buckets=(HashMap*) calloc (1,sizeof(HashMap));
+      |     ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+0c42e0d
