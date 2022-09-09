@@ -42,7 +42,7 @@ int is_equal(void* key1, void* key2){
 void insertMap(HashMap * map, char * key, void * value) {
     Pair *newpair=createPair(key,value);
     long pos=hash(key,map->capacity);
-    if (map->bcukets[pos]!=NULL){
+    if (map->buckets[pos]!=NULL){
       if (pos==map->capacity)
         pos=0;
       for (;pos<map->capacity;pos++){
