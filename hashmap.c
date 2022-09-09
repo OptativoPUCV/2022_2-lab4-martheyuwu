@@ -48,6 +48,8 @@ void insertMap(HashMap * map, char * key, void * value) {
     Pair **array=(Pair**)calloc(cap,sizeof(Pair*));
     array=map->buckets;
     if (array[pos]!=NULL){
+      if (pos==cap)
+        pos=0;
       for (;pos<cap;pos++){
         if (array[pos]==NULL){
             array[pos]=newpair;
