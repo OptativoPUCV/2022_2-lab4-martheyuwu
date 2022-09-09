@@ -53,8 +53,7 @@ void enlarge(HashMap * map) {
 
 HashMap * createMap(long capacity) {
     HashMap *hash;
-    buck=hash->buckets;
-    buck=(buckets*) calloc (1,sizeof(buckets));
+    hash->buckets=(buckets*) calloc (1,sizeof(buckets));
     hash->current=-1;
     return hash;
 }

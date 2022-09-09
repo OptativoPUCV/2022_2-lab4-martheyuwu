@@ -19,3 +19,17 @@ hashmap.c:57:19: error: expected expression before ‘)’ token
       |                   ^
 Compilation failed
 3e544ae
+Fri 09 Sep 2022 02:24:08 AM UTC: 
+ hashmap.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘createMap’:
+hashmap.c:56:20: error: ‘buckets’ undeclared (first use in this function)
+   56 |     hash->buckets=(buckets*) calloc (1,sizeof(buckets));
+      |                    ^~~~~~~
+hashmap.c:56:20: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:56:28: error: expected expression before ‘)’ token
+   56 |     hash->buckets=(buckets*) calloc (1,sizeof(buckets));
+      |                            ^
+Compilation failed
+71c82aa
