@@ -55,11 +55,11 @@ void insertMap(HashMap * map, char * key, void * value) {
         map->size++;
       }
     }
-    /*else{
+    else{
       map->buckets[pos]=newpair;
       map->current=pos;
       map->size++;
-    }*/
+    }
 }
 
 void enlarge(HashMap * map) {
