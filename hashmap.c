@@ -51,13 +51,13 @@ void insertMap(HashMap * map, char * key, void * value) {
             map->current=pos;
             break;
         }
-        map->capacity++;
+        map->size++;
       }
     }
     else{
       map->buckets[pos]=newpair;
       map->current=pos;
-      map->capacity++;
+      map->size++;
     }
 }
 
