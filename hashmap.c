@@ -90,7 +90,7 @@ Pair * searchMap(HashMap * map,  char * key) {
         pos=0;
       if (map->buckets[pos]->key==NULL)
         return NULL;
-      if (strcmp(map->buckets[pos]->key,key)==0)
+      if (is_equal(map->buckets[pos]->key,key)==1)
         map->current=pos;
       pos++;
     }
