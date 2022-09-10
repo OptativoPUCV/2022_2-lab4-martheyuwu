@@ -2961,3 +2961,20 @@ Sat 10 Sep 2022 07:19:49 PM UTC:
  1 file changed, 2 insertions(+), 2 deletions(-)
  tests:  0|0
 2e6cfea
+Sat 10 Sep 2022 07:20:39 PM UTC: 
+ hashmap.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:93:7: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+   93 |       if (is_equal(map->buckets[pos]->key,key)==1)
+      |       ^~
+hashmap.c:95:9: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   95 |         return 1;
+      |         ^~~~~~
+hashmap.c:95:16: error: returning ‘int’ from a function with return type ‘Pair *’ makes pointer from integer without a cast [-Werror=int-conversion]
+   95 |         return 1;
+      |                ^
+cc1: all warnings being treated as errors
+Compilation failed
+f5f1d53
