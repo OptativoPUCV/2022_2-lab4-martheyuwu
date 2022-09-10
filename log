@@ -2978,3 +2978,17 @@ hashmap.c:95:16: error: returning ‘int’ from a function with return type ‘
 cc1: all warnings being treated as errors
 Compilation failed
 f5f1d53
+Sat 10 Sep 2022 07:21:42 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:93:7: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+   93 |       if (is_equal(map->buckets[pos]->key,key)==1)
+      |       ^~
+hashmap.c:95:9: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   95 |         return map->buckets[pos];
+      |         ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+0715442
