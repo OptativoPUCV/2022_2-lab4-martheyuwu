@@ -90,9 +90,10 @@ Pair * searchMap(HashMap * map,  char * key) {
         pos=0;
       if (map->buckets[pos]==NULL)
         return NULL;
-      if (is_equal(map->buckets[pos]->key,key)==1)
+      if (is_equal(map->buckets[pos]->key,key)==1){
         map->current=pos;
         return map->buckets[pos];
+      }
       pos++;
     }
 }
