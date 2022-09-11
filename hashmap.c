@@ -136,6 +136,7 @@ Pair * nextMap(HashMap * map) {
           return map->buckets[pos];
         }
       }
-      pos++;
+      else
+        return NULL;
     }
 }
