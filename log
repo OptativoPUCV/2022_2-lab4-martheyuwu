@@ -3032,3 +3032,14 @@ hashmap.c:88:7: note: each undeclared identifier is reported only once for each 
 cc1: all warnings being treated as errors
 Compilation failed
 42f6a13
+Sun 11 Sep 2022 03:43:11 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:88:7: error: ‘size’ undeclared (first use in this function)
+   88 |       size++;
+      |       ^~~~
+hashmap.c:88:7: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+968c3cd
