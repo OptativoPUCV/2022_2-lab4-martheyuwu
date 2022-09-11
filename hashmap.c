@@ -113,7 +113,7 @@ Pair * searchMap(HashMap * map,  char * key) {
 }
 
 Pair * firstMap(HashMap * map) {
-    long pos=-1;
+    long pos=0;
     while (1){
       if (map->buckets[pos]!=NULL){
         map->current=pos;
