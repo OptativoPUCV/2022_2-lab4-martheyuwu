@@ -2998,3 +2998,22 @@ Sat 10 Sep 2022 07:22:00 PM UTC:
  tests:  8|3
 total_score: 40/70
 a4ff93d
+Sun 11 Sep 2022 03:42:48 PM UTC: 
+ hashmap.c | 12 ++++++++++--
+ 1 file changed, 10 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:82:14: error: implicit declaration of function ‘Hash’; did you mean ‘hash’? [-Werror=implicit-function-declaration]
+   82 |     long pos=Hash(key,map->capacity);
+      |              ^~~~
+      |              hash
+hashmap.c:87:29: error: statement with no effect [-Werror=unused-value]
+   87 |       map->buckets[pos]->key==NULL;
+      |                             ^
+hashmap.c:88:7: error: ‘size’ undeclared (first use in this function)
+   88 |       size++;
+      |       ^~~~
+hashmap.c:88:7: note: each undeclared identifier is reported only once for each function it appears in
+cc1: all warnings being treated as errors
+Compilation failed
+6f526c1
