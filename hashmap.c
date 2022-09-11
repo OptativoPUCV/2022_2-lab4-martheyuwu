@@ -134,8 +134,6 @@ Pair * nextMap(HashMap * map) {
           return map->buckets[pos];
         }
       }
-      if (map->buckets[pos]==NULL)
-        return NULL;
       pos++;
     }
 }
