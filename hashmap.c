@@ -108,8 +108,13 @@ Pair * searchMap(HashMap * map,  char * key) {
 }
 
 Pair * firstMap(HashMap * map) {
-
-    return NULL;
+    long pos=o;
+    while (1){
+      if (map->buckets[pos]!=NULL){
+        map->current=pos;
+        return map->buckets[pos];
+      }
+    }
 }
 
 Pair * nextMap(HashMap * map) {
