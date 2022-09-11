@@ -3233,3 +3233,14 @@ hashmap.c:120:19: error: returning ‘Pair **’ from a function with incompatib
 cc1: all warnings being treated as errors
 Compilation failed
 6490377
+Sun 11 Sep 2022 10:22:39 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘firstMap’:
+hashmap.c:120:16: error: returning ‘HashMap *’ {aka ‘struct HashMap *’} from a function with incompatible return type ‘Pair *’ [-Werror=incompatible-pointer-types]
+  120 |         return map;
+      |                ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+0e705f7
