@@ -3330,3 +3330,14 @@ hashmap.c:129:5: error: ‘pos’ undeclared (first use in this function); did y
 hashmap.c:129:5: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 4df2c95
+Sun 11 Sep 2022 10:54:17 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘nextMap’:
+hashmap.c:131:11: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+  131 |       if (pos=map->capacity)
+      |           ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+2466dbd

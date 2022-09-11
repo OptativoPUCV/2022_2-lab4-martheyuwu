@@ -126,7 +126,7 @@ Pair * firstMap(HashMap * map) {
 }
 
 Pair * nextMap(HashMap * map) {
-    pos=map->current+1;
+    long pos=map->current+1;
     while (1){
       if (pos=map->capacity)
         pos=0;
