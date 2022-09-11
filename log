@@ -3210,3 +3210,9 @@ hashmap.c:120:33: error: returning ‘char *’ from a function with incompatibl
 cc1: all warnings being treated as errors
 Compilation failed
 0929996
+Sun 11 Sep 2022 10:11:38 PM UTC: 
+ hashmap.c | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+ tests:  12|2
+total_score: 50/70
+26f1c0c
