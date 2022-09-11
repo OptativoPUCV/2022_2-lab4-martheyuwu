@@ -3409,3 +3409,14 @@ Sun 11 Sep 2022 11:05:49 PM UTC:
  tests:  15|2
 total_score: 50/70
 3933343
+Sun 11 Sep 2022 11:08:53 PM UTC: 
+ hashmap.c | 5 +----
+ 1 file changed, 1 insertion(+), 4 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘nextMap’:
+hashmap.c:131:11: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+  131 |       if (pos=map->capacity)
+      |           ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+10dd578
