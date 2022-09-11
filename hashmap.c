@@ -119,6 +119,7 @@ Pair * firstMap(HashMap * map) {
         map->current=pos;
         return map->buckets[pos];
       }
+      pos++;
     }
 }
 
