@@ -3377,3 +3377,17 @@ Sun 11 Sep 2022 11:01:58 PM UTC:
  tests:  13|2
 total_score: 50/70
 96582bb
+Sun 11 Sep 2022 11:04:18 PM UTC: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘nextMap’:
+hashmap.c:134:9: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+  134 |         if (map->buckets[pos]->key!=NULL)
+      |         ^~
+hashmap.c:136:11: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  136 |           return map->buckets[pos];
+      |           ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+b967326
