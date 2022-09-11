@@ -80,6 +80,7 @@ HashMap * createMap(long capacity) {
 
 void eraseMap(HashMap * map,  char * key) {    
     long pos=hash(key,map->capacity);
+  long aux=pos;
   while (1){
     if (pos==map->capacity)
       pos=0;
@@ -89,6 +90,8 @@ void eraseMap(HashMap * map,  char * key) {
       break;
     }
     pos++;
+    if (pos==aux)
+      break;
   }
 }
 
