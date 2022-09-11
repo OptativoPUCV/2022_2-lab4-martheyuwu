@@ -116,12 +116,12 @@ Pair * firstMap(HashMap * map) {
     long pos=0;
     int aux=0;
     while (1){
-      if (pos==NULL){
+      if (map->buckets[pos]==NULL){
         while (1){
-          if (pos!=NULL){
+          if (map->buckets[pos]!=NULL){
             aux=1;
             break;
-            }
+          }
           pos++;
         }
       }
