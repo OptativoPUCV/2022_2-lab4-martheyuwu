@@ -115,9 +115,7 @@ Pair * searchMap(HashMap * map,  char * key) {
 Pair * firstMap(HashMap * map) {
     long pos=0;
     while (1){
-      if (pos==map->capacity)
-        pos=0;
-      if (map->buckets[pos]!=NULL){
+      if (map->buckets[pos]->value!=NULL){
         map->current=pos;
         return map->buckets[pos];
       }
