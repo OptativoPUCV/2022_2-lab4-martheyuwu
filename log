@@ -3341,3 +3341,9 @@ hashmap.c:131:11: error: suggest parentheses around assignment used as truth val
 cc1: all warnings being treated as errors
 Compilation failed
 2466dbd
+Sun 11 Sep 2022 10:54:30 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  15|2
+total_score: 50/70
+2325793
