@@ -3347,3 +3347,15 @@ Sun 11 Sep 2022 10:54:30 PM UTC:
  tests:  15|2
 total_score: 50/70
 2325793
+Sun 11 Sep 2022 10:58:22 PM UTC: 
+ hashmap.c | 3 +++
+ 1 file changed, 3 insertions(+)
+In file included from test.c:4:
+hashmap.c: In function ‘nextMap’:
+hashmap.c:129:19: error: ‘pos’ undeclared (first use in this function); did you mean ‘pow’?
+  129 |     long terminar=pos;
+      |                   ^~~
+      |                   pow
+hashmap.c:129:19: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+a67c055
