@@ -114,9 +114,22 @@ Pair * searchMap(HashMap * map,  char * key) {
 
 Pair * firstMap(HashMap * map) {
     long pos=0;
+    int aux=0;
     while (1){
-      if (map->buckets[pos]==NULL)
-        return NULL;
+      if (pos==NULL){
+        while (1){
+          if (pos!=NULL){
+            aux=1;
+            break;
+            }
+          pos++;
+        }
+      }
+      if (aux==1)
+        break;
+      pos++;
+    }
+    while (1){
       if (map->buckets[pos]!=NULL){
         map->current=pos;
         return map->buckets[pos];

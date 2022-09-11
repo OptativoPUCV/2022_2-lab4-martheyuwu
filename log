@@ -3168,3 +3168,17 @@ Sun 11 Sep 2022 07:42:53 PM UTC:
  tests:  12|2
 total_score: 50/70
 f8069be
+Sun 11 Sep 2022 07:54:15 PM UTC: 
+ hashmap.c | 17 +++++++++++++++--
+ 1 file changed, 15 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘firstMap’:
+hashmap.c:119:14: error: comparison between pointer and integer [-Werror]
+  119 |       if (pos==NULL){
+      |              ^~
+hashmap.c:121:18: error: comparison between pointer and integer [-Werror]
+  121 |           if (pos!=NULL){
+      |                  ^~
+cc1: all warnings being treated as errors
+Compilation failed
+932c42a
