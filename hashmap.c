@@ -79,7 +79,7 @@ HashMap * createMap(long capacity) {
 }
 
 void eraseMap(HashMap * map,  char * key) {    
-    long pos=hash(key,map->capacity);
+  long pos=hash(key,map->capacity);
   long aux=pos;
   while (1){
     if (pos==map->capacity)
@@ -113,7 +113,7 @@ Pair * searchMap(HashMap * map,  char * key) {
 }
 
 Pair * firstMap(HashMap * map) {
-    long pos=0;
+    pos=map->current;
     while (1){
       if (map->buckets[pos]!=NULL){
         map->current=pos;
