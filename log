@@ -3565,3 +3565,8 @@ hashmap.c:67:12: error: variable ‘aux’ set but not used [-Werror=unused-but-
 cc1: all warnings being treated as errors
 Compilation failed
 fbf1675
+Mon 12 Sep 2022 12:33:53 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|0
+453bd1e
