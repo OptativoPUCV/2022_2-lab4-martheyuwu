@@ -3505,3 +3505,25 @@ Mon 12 Sep 2022 12:12:13 AM UTC:
  tests:  16|1
 total_score: 60/70
 3f4c2d0
+Mon 12 Sep 2022 12:32:04 AM UTC: 
+ hashmap.c | 13 +++++++++++--
+ 1 file changed, 11 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:67:15: error: initialization of ‘Pair *’ from incompatible pointer type ‘Pair **’ [-Werror=incompatible-pointer-types]
+   67 |     Pair *aux=(Pair**)calloc(map->capacity,sizeof(Pair*));
+      |               ^
+hashmap.c:68:8: error: assignment to ‘Pair *’ from incompatible pointer type ‘Pair **’ [-Werror=incompatible-pointer-types]
+   68 |     aux=map->buckets;
+      |        ^
+hashmap.c:72:5: error: ‘pos’ undeclared (first use in this function); did you mean ‘pow’?
+   72 |     pos=0;
+      |     ^~~
+      |     pow
+hashmap.c:72:5: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:67:11: error: variable ‘aux’ set but not used [-Werror=unused-but-set-variable]
+   67 |     Pair *aux=(Pair**)calloc(map->capacity,sizeof(Pair*));
+      |           ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+d22f032
