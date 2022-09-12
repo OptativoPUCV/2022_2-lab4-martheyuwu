@@ -3549,3 +3549,19 @@ hashmap.c:67:10: error: variable ‘aux’ set but not used [-Werror=unused-but-
 cc1: all warnings being treated as errors
 Compilation failed
 9aa3034
+Mon 12 Sep 2022 12:33:38 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:72:5: error: ‘pos’ undeclared (first use in this function); did you mean ‘pow’?
+   72 |     pos=0;
+      |     ^~~
+      |     pow
+hashmap.c:72:5: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:67:12: error: variable ‘aux’ set but not used [-Werror=unused-but-set-variable]
+   67 |     Pair **aux=(Pair**)calloc(map->capacity,sizeof(Pair*));
+      |            ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+fbf1675
