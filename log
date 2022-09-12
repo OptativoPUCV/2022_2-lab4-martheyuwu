@@ -3527,3 +3527,25 @@ hashmap.c:67:11: error: variable ‘aux’ set but not used [-Werror=unused-but-
 cc1: all warnings being treated as errors
 Compilation failed
 d22f032
+Mon 12 Sep 2022 12:32:39 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:67:14: error: invalid initializer
+   67 |     Pair aux=(Pair**)calloc(map->capacity,sizeof(Pair*));
+      |              ^
+hashmap.c:68:9: error: incompatible types when assigning to type ‘Pair’ from type ‘Pair **’
+   68 |     aux=map->buckets;
+      |         ^~~
+hashmap.c:72:5: error: ‘pos’ undeclared (first use in this function); did you mean ‘pow’?
+   72 |     pos=0;
+      |     ^~~
+      |     pow
+hashmap.c:72:5: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:67:10: error: variable ‘aux’ set but not used [-Werror=unused-but-set-variable]
+   67 |     Pair aux=(Pair**)calloc(map->capacity,sizeof(Pair*));
+      |          ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+9aa3034
